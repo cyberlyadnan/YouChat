@@ -8,7 +8,7 @@ import Notification from "./components/Notification/Notification";
 import { auth } from "./utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { Provider } from "react-redux";
-import appStore from "./utils/store";
+import appStore from "./utils/Store/store";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +26,8 @@ function App() {
     },
   ]);
 
+
+  
   useEffect(() => {
     // Set a timer for 2 seconds
     const timer = setTimeout(() => {
